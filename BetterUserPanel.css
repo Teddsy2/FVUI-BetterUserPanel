@@ -1,0 +1,59 @@
+/*=============================================
+=              FVUI compatibility            =
+=============================================*/
+.sidebar_c48ade > .container__2637a,
+.sidebar_c48ade > .privateChannels__35e86 {
+  margin-bottom: 0 !important;
+}
+
+.container__2637a .content__99f8c::before {
+  height: 15vh !important;
+}
+
+.sidebar_c48ade .scroller__629e4 {
+  margin-top: 0 !important; /* Reset margin-top */
+}
+
+.inner_e131a9 {
+  display: none;
+}
+/*=====  End of Section FVUI compatibility  ======*/
+
+
+/*=============================================
+=                User Panel Bottom            =
+=============================================*/
+
+#app-mount .panels_c48ade {
+  order: 10; /* Ensure it appears at the bottom */
+  margin-top: auto;
+  padding-top: 0;
+  position: relative; /* No sticky positioning */
+  z-index: initial;
+}
+
+/* Reset styles that pushed other elements to bottom or altered layout */
+#app-mount .searchBar__35e86,
+#app-mount .container_f37cb1 {
+  position: relative !important;
+  bottom: auto !important;
+  order: initial !important;
+}
+
+/* Optional spacing for user panel if needed */
+.sidebar_c48ade > .container__2637a,
+.sidebar_c48ade > .privateChannels__35e86 {
+  margin-bottom: 64px !important;
+}
+
+/* Adjust content margin if needed */
+.sidebar_c48ade .content__99f8c {
+  margin-top: 0 !important;
+}
+
+.animatedContainer_f37cb1,
+.content__99f8c > div[aria-hidden="true"][style="height: 84px;"] {
+  display: none;
+}
+
+/*=====  End of Section User Panel Bottom  ======*/
