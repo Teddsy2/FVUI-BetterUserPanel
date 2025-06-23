@@ -11,7 +11,7 @@
 }
 
 .sidebar_c48ade .scroller__629e4 {
-  margin-top: 0 !important; /* Reset margin-top */
+  margin-top: 0 !important; /* Reset margin */
 }
 
 .inner_e131a9 {
@@ -21,18 +21,31 @@
 
 
 /*=============================================
-=                User Panel Bottom            =
+=              User Panel at Bottom           =
 =============================================*/
 
+/* Ensure sidebar uses flex column layout */
+.sidebar_c48ade {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main scrollable content should grow */
+.sidebar_c48ade .scroller__629e4 {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Pin the user panel to the bottom */
 #app-mount .panels_c48ade {
-  order: 10; /* Ensure it appears at the bottom */
+  order: 10;
   margin-top: auto;
-  padding-top: 0;
-  position: relative; /* No sticky positioning */
+  position: relative !important;
+  bottom: 0 !important;
   z-index: initial;
 }
 
-/* Reset styles that pushed other elements to bottom or altered layout */
+/* Ensure other elements aren't absolutely positioned */
 #app-mount .searchBar__35e86,
 #app-mount .container_f37cb1 {
   position: relative !important;
@@ -40,13 +53,13 @@
   order: initial !important;
 }
 
-/* Optional spacing for user panel if needed */
+/* Remove any top-pushing adjustments */
 .sidebar_c48ade > .container__2637a,
 .sidebar_c48ade > .privateChannels__35e86 {
-  margin-bottom: 64px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
-/* Adjust content margin if needed */
 .sidebar_c48ade .content__99f8c {
   margin-top: 0 !important;
 }
@@ -56,4 +69,4 @@
   display: none;
 }
 
-/*=====  End of Section User Panel Bottom  ======*/
+/*=====  End of Section User Panel at Bottom  ======*/
